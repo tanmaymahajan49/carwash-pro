@@ -9,5 +9,5 @@ phases:
       - echo Build complete.
 artifacts:
   files:
-    - service-registry/target/service-registry.jar
+    - target/service-registry.jar
   discard-paths: yes

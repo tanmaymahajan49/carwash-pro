@@ -7,7 +7,8 @@ phases:
   post_build:
     commands:
       - echo Build complete.
+      - ls -R service-registry/target/
 artifacts:
   files:
-    - target/service-registry.jar
+    - service-registry/target/service-registry.jar
   discard-paths: yes

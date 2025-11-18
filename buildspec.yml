@@ -2,14 +2,13 @@ version: 0.2
 phases:
   build:
     commands:
-      - cd service-registry
       - echo Packaging JAR file...
-      - mvn clean package -DskipTests
+      - mvn -f service-registry/pom.xml clean package -DskipTests
   post_build:
     commands:
       - echo Build complete.
-      - ls -R target/
+      - ls -R service-registry/target/
 artifacts:
   files:
-    - target/service-registry.jar
+    - service-registry/target/service-registry.jar
   discard-paths: yes
